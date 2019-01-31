@@ -1,5 +1,5 @@
 - hosts: all
-  tasks::
+  tasks:
     - name: install snapd
       apt: name=snapd state=latest
       become: yes
