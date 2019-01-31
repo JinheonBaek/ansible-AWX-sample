@@ -1,3 +1,10 @@
 - hosts: all
-  roles:
-    - role: gantsign.intellij
+  tasks::
+    - name: install snapd
+      apt: name=snapd state=latest
+      become: yes
+      become_method: su
+    - name: install intellij community version
+      command: snap install intellij-idea-community --classic
+      become: yes
+      become_method: su
