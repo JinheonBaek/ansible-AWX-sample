@@ -1,0 +1,11 @@
+- hosts: all
+  tasks:
+    - name: install openjdk-8-jre
+      apt: name=openjdk-8-jre state=latest
+      become: yes
+    - name: install snapd
+      apt: name=snapd state=latest
+      become: yes
+    - name: install eclipse
+      command: snap install eclipse --classic
+      become: yes
