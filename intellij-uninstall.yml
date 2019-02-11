@@ -3,3 +3,6 @@
     - name: uninstall intellij community version
       command: snap remove intellij-idea-community
       become: yes
+    - name: uninstall snapd
+      apt: name=snapd state=absent
+      become: yes
