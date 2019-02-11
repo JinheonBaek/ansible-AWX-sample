@@ -1,0 +1,5 @@
+- hosts: all
+  tasks:
+    - name: uninstall intellij community version
+      command: rm -rf /usr/bin/intellij-idea-community
+      become: yes
