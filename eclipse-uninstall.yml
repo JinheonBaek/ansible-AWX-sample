@@ -3,9 +3,6 @@
     - name: uninstall eclipse
       command: snap remove eclipse
       become: yes
-    - name: uninstall snapd
-      apt: name=snapd state=absent
-      become: yes
     - name: uninstall openjdk-8-jre
       apt: name=openjdk-8-jre state=absent
       become: yes
