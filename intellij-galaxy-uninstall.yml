@@ -1,5 +1,11 @@
 - hosts: all
   tasks:
-    - name: uninstall intellij community version
-      command: rm -rf /usr/bin/intellij-idea-community
+    - name: uninstall intellij
+      command: rm -rf /opt/idea/idea-community-2018.3.4
+      become: yes
+    - name: uninstall intellij launcher script
+      command: rm -rf /usr/local/bin/idea
+      become: yes
+    - name: uninstall intellij desktop file
+      command: rm -rf /usr/share/applications/jetbrains-idea-ce.desktop
       become: yes
