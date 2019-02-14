@@ -15,3 +15,8 @@
         state: absent
         path: /usr/share/applications/jetbrains-idea-ce.desktop
       become: yes
+    - name: uninstall intellij fact
+      file:
+        state: absent
+        path: /usr/share/applications/jetbrains-idea-ce.desktop
+      become: yes
