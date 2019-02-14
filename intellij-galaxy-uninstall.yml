@@ -18,5 +18,5 @@
     - name: uninstall intellij fact
       file:
         state: absent
-        path: /usr/share/applications/jetbrains-idea-ce.desktop
+        path: /etc/ansible/facts.d/intellij.fact
       become: yes
